@@ -1,0 +1,33 @@
+{
+  "name": "wolt-e2e-tests",
+  "version": "1.0.0",
+  "description": "Playwright E2E Test Automation Framework for Wolt",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:all": "npx playwright test tests/ui tests/api",
+    "test:ui": "npx playwright test tests/ui",
+    "test:api": "npx playwright test tests/api",
+    "test:debug": "npx playwright test --debug",
+    "test:headed": "npx playwright test --headed",
+    "test:report": "npx playwright show-report",
+    "install:browsers": "npx playwright install",
+    "allure:report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "e2e",
+    "testing",
+    "wolt"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.0.0",
+    "allure-playwright": "^3.2.2",
+    "dotenv": "^16.5.0",
+    "typescript": "^5.0.0"
+  }
+}
